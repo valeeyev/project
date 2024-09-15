@@ -1,17 +1,23 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div id="app">
+    <h1>{{ title }}</h1>
+    <HelloWorld />
+    <!-- Use PascalCase here if that's how you named the component -->
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import HelloWorld from "./components/HelloWorld.vue"; // Adjust the path as necessary
 
 export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
-}
+  name: "App",
+  components: { HelloWorld }, // Register the component using PascalCase
+  data() {
+    return {
+      title: "My First Vue App",
+    };
+  },
+};
 </script>
 
 <style>
